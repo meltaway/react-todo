@@ -52,6 +52,7 @@ function AddTodoForm({onAdd}) {
 
     function submitHandler(e) {
         e.preventDefault() // prevent page from reloading
+
         if (input.getValue().trim().length !== 0) {
             // call add event and set input to empty again
             onAdd(input.getValue())
