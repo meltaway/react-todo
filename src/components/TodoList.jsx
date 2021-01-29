@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Todo from "./Todo"
+import Todo from "./Todo.jsx"
 
 const styles = {
     ul: {
@@ -19,7 +19,7 @@ function TodoList(props) {
             {
                 // foreach doesn't work
                 props.arr.map(item => {
-                    return <Todo key={ item.id } content={ item } onChange={ props.onToggle }/>
+                    return <Todo key={ item.id } content={ item } onChange={ props.onCheck } onRemove={ props.onRemoveClick }/>
                 })
             }
         </ul>
@@ -27,9 +27,10 @@ function TodoList(props) {
 }
 
 // validate types of props passed to components
-// TodoList.propTypes = {
-//     arr: PropTypes.arrayOf(PropTypes.object).isRequired
-//     onToggle: PropTypes.func.isRequired
-// }
+TodoList.propTypes = {
+    arr: PropTypes.arrayOf(PropTypes.object).isRequired,
+    onCheck: PropTypes.func.isRequired,
+    onRemoveClick: PropTypes.func.isRequired
+}
 
 export default TodoList

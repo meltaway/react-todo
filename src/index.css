@@ -29,7 +29,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.list-wrapper {
+.list-container {
     margin-left: 5%;
     margin-top: 3%;
 
@@ -39,6 +39,12 @@ code {
 
     padding-top: 20px;
     padding-left: 40px;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 h1 {
@@ -55,4 +61,12 @@ h1 {
 
 .completed {
     text-decoration: line-through;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: x-large;
+    font-weight: 550;
+    margin-right: 150px;
+    margin-top: 15px;
 }
